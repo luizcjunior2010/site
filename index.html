@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professor Luiz Carlos - Portal de Materiais SENAI SP</title>
+  <style>
+    :root {
+      --cor-primaria: #e30613; /* Vermelho padrão SENAI-SP */
+      --cor-escura: #1e293b;
+      --cor-fundo: #f4f6f9;
+      --cor-branca: #ffffff;
+      --cor-texto: #334155;
+      --cor-aviso-fundo: #fffbeb;
+      --cor-aviso-borda: #f59e0b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(135deg, var(--cor-escura) 0%, #0f172a 100%);
+      color: var(--cor-branca);
+      border-bottom: 5px solid var(--cor-primaria);
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+
+    header .tag-instituicao {
+      display: inline-block;
+      background-color: var(--cor-primaria);
+      color: var(--cor-branca);
+      font-weight: bold;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    header p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+    }
+
+    /* Container Principal */
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .titulo-secao {
+      font-size: 1.4rem;
+      color: var(--cor-escura);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Mural de Avisos */
+    .mural-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card-aviso {
+      background-color: var(--cor-aviso-fundo);
+      border-left: 5px solid var(--cor-aviso-borda);
+      padding: 1.2rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-aviso .data-aviso {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #b45309;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-aviso h3 {
+      color: var(--cor-escura);
+      font-size: 1.15rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* Links do OneDrive */
+    .materiais-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card-material {
+      background-color: var(--cor-branca);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      border-top: 4px solid var(--cor-primaria);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card-material:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-material h3 {
+      color: var(--cor-escura);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-material p {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 1.25rem;
+    }
+
+    .btn-onedrive {
+      display: inline-block;
+      text-align: center;
+      background-color: #0078d4; /* Azul padrão Microsoft OneDrive */
+      color: var(--cor-branca);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.65rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-onedrive:hover {
+      background-color: #005a9e;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #64748b;
+      font-size: 0.9rem;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header>
+    <span class="tag-instituicao">SENAI-SP</span>
+    <h1>Site Professor Luiz Carlos</h1>
+    <p>Portal de Materiais de Aula, Apostilas e Mural de Avisos</p>
+  </header>
+
+  <main>
+
+    <!-- ================= MURAL DE AVISOS E NOTÍCIAS ================= -->
+    <!-- Para adicionar ou alterar um aviso, basta editar os textos abaixo -->
+    <section>
+      <h2 class="titulo-secao">📢 Mural de Avisos e Notícias</h2>
+      
+      <div class="mural-grid">
+        
+        <!-- AVISO 1 -->
+        <div class="card-aviso">
+          <span class="data-aviso">Importante • Laboratório</span>
+          <h3>Uso obrigatório de EPIs nas aulas práticas</h3>
+          <p>Lembrete a todas as turmas: para as atividades em bancada e painéis elétricos, é obrigatório o uso de calçado fechado e óculos de proteção.</p>
+        </div>
+
+        <!-- AVISO 2 -->
+        <div class="card-aviso">
+          <span class="data-aviso">Cronograma • Entregas</span>
+          <h3>Entrega da documentação de Projetos</h3>
+          <p>Fiquem atentos ao prazo final para envio dos relatórios técnicos e esquemas elétricos revisados na pasta da turma.</p>
+        </div>
+
+        <!-- Para criar um novo aviso, copie um bloco "card-aviso" acima e cole aqui -->
+
+      </div>
+    </section>
+
+
+    <!-- ================= MATERIAIS DE AULA ================= -->
+    <!-- Substitua "COLE_AQUI_O_LINK_DO_ONEDRIVE" pelo link compartilhado da sua pasta -->
+    <section>
+      <h2 class="titulo-secao">📁 Materiais de Aula</h2>
+
+      <div class="materiais-grid">
+
+        <!-- DISCIPLINA 1 -->
+        <div class="card-material">
+          <div>
+            <h3>Curso Supervisório</h3>
+            <p>Materiais de apoio do curso FIC de Supervisório: Apostilas, listas de exercícios, folhas de dados (datasheets).</p>
+          </div>
+          <a href=https://1drv.ms/b/c/d7ad3b71cda859d5/IQAhGGe6uIr5QLrHXjV26O-_ATGBP7MH5PDxOkKBYkEeYCY?e=bsynuE target="_blank" rel="noopener noreferrer" class="btn-onedrive">
+            Acessar Pasta
+          </a>
+        </div>
+
+        <!-- DISCIPLINA 2 -->
+        <div class="card-material">
+          <div>
+            <h3>Automação Industrial e CLP</h3>
+            <p>Exemplos de programação em Ladder, manuais de hardware, exercícios práticos de bancada e integração SCADA.</p>
+          </div>
+          <a href="COLE_AQUI_O_LINK_DO_ONEDRIVE" target="_blank" rel="noopener noreferrer" class="btn-onedrive">
+            Acessar Pasta
+          </a>
+        </div>
+
+        <!-- DISCIPLINA 3 -->
+        <div class="card-material">
+          <div>
+            <h3>Projetos</h3>
+            <p>Modelos de escopo, cronogramas, ferramentas de gestão da qualidade, normas de segurança e templates de documentação.</p>
+          </div>
+          <a href="COLE_AQUI_O_LINK_DO_ONEDRIVE" target="_blank" rel="noopener noreferrer" class="btn-onedrive">
+            Acessar Pasta
+          </a>
+        </div>
+
+        <!-- Para adicionar uma nova matéria, copie um bloco "card-material" acima e cole aqui -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer>
+    <p><strong>Professor Luiz Carlos</strong> • Cursos Técnicos e Formação Profissional SENAI SP</p>
+  </footer>
+
+</body>
+</html>
